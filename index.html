@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <h1>ShopHub</h1>
+          </div>
+          <div class="header-right">
+            <span class="username-display"
+              >Welcome, <span id="username-text">Guest</span></span
+            >
+            <div class="cart-icon-wrapper">
+              <a href="cart.html" class="cart-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+                <span class="cart-count" id="cart-count">0</span>
+              </a>
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="slider-section">
+      <div class="slider-container">
+        <div class="slider"></div>
+        <button class="slider-btn prev" onclick="prev()">❮</button>
+        <button class="slider-btn next" onclick="next()">❯</button>
+      </div>
+    </section>
+    <section class="products-section">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Product Card Template -->
+    <template id="product-card-template">
+      <div class="product-card">
+        <img src="" alt="" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-title"></h3>
+          <p class="product-price"></p>
+          <div class="product-buttons">
+            <button class="btn btn-secondary btn-details">Details</button>
+            <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <button class="scroll-to-top" id="scroll-to-top">↑</button>
+    <script src="js/auth.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>
