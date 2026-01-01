@@ -58,31 +58,29 @@
 
     <!-- Product Detail Template -->
     <template id="product-detail-template">
-      <div class="display-contents">
-        <div>
-          <img src="" alt="" class="product-detail-image" />
-        </div>
-        <div class="product-detail-info">
-          <h1 class="detail-title"></h1>
-          <span class="product-category"></span>
-          <p class="product-detail-price"></p>
-          <p class="product-description"></p>
-          <div class="quantity-control">
-            <label for="quantity">Quantity:</label>
-            <div class="quantity-input">
-              <button type="button" class="quantity-btn" id="decrease-qty">
-                -
-              </button>
-              <input type="number" id="quantity" value="1" min="1" />
-              <button type="button" class="quantity-btn" id="increase-qty">
-                +
-              </button>
-            </div>
+      <div style="flex: 0 0 35%; max-width: 350px">
+        <img src="" alt="" class="product-detail-image" />
+      </div>
+      <div class="product-detail-info">
+        <h1 class="detail-title"></h1>
+        <span class="product-category"></span>
+        <p class="product-detail-price"></p>
+        <p class="product-description"></p>
+        <div class="quantity-control">
+          <label for="quantity">Quantity:</label>
+          <div class="quantity-input">
+            <button type="button" class="quantity-btn" id="decrease-qty">
+              -
+            </button>
+            <input type="number" id="quantity" value="1" min="1" />
+            <button type="button" class="quantity-btn" id="increase-qty">
+              +
+            </button>
           </div>
-          <button class="add-to-cart-detail" id="add-to-cart-btn">
-            Add to Cart
-          </button>
         </div>
+        <button class="add-to-cart-detail" id="add-to-cart-btn">
+          Add to Cart
+        </button>
       </div>
     </template>
 
